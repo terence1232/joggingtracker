@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogging Record Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loadingScreen">
+        <div class="loading-content">
+            <h1>Welcome Boss Terence</h1>
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div id="mainContent">
+        <div class="container">
+            <h1>Jogging Record Tracker</h1>
+            <div id="loginSection">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div id="adminSection" style="display:none;">
+                <h2>Admin Panel</h2>
+                <h3>Register New Member</h3>
+                <form id="registerForm">
+                    <input type="text" id="registerUsername" placeholder="Username" required>
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+                    <button type="submit">Register Member</button>
+                </form>
+                <h3>Member Records</h3>
+                <div id="memberRecords"></div>
+            </div>
+            <div id="memberSection" style="display:none;">
+                <h2>Member Panel</h2>
+                <form id="joggingForm">
+                    <input type="date" id="date" required>
+                    <input type="number" id="distance" step="0.01" min="0" placeholder="Distance (km)" required>
+                    <input type="time" id="duration" required>
+                    <button type="submit">Add Record</button>
+                </form>
+                <h3>Your Records</h3>
+                <div id="userRecords"></div>
+            </div>
+            <button id="logoutButton" style="display:none;">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
